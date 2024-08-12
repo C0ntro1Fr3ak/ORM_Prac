@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Question1</h1>
+{%  for question in questions %}
+<p>
+    {{ question }}
+    {{ question.pub_date }}
+    {{ question.choice_set.all }}
+
+</p>
+{% endfor %}
+<ul>
+    <li>
+        <a href={% url 'index' %}>
+            home
+            </a>
+    </li>
+</ul>
+</body>
+</html>
